@@ -1,2 +1,2 @@
-# -income-classification-spark-mllib-
-Built an end-to-end machine learning   
+# income-classification-spark-mllib
+Built an end-to-end machine learning classification system using Apache Spark MLlib to predict whether individuals earn above or below $50K annually based on U.S. Census data. Performed data preprocessing, categorical feature encoding, exploratory data analysis, and trained Decision Tree and Random Forest models, achieving over 85% accuracy. Evaluated model performance using confusion matrices, classification metrics, and feature importance analysis.
