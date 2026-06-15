@@ -22,22 +22,50 @@ using demographic and employment-related features such as age, education level, 
 - Jupyter Notebook
 
 # The following visualizations were performed:
-# * Income Class Distribution
-<img width="559" height="392" alt="image" src="https://github.com/user-attachments/assets/b829c740-62fb-407b-9e35-7663b249104e" />
-
-# * Education Level vs Income
-<img width="1015" height="538" alt="image" src="https://github.com/user-attachments/assets/9e7a5002-5991-4697-a296-ca0e903be8c9" />
-
-# * Age Distribution by Income Class
-<img width="705" height="469" alt="image" src="https://github.com/user-attachments/assets/a76eae8c-fa2a-41e7-9c12-7b0772e8ef98" />
-
-# * Correlation Heatmap
-<img width="860" height="527" alt="image" src="https://github.com/user-attachments/assets/287d4b44-420f-44ce-8ac5-00d67db1dead" />
-
-# * Model Comparison Charts
-<img width="536" height="393" alt="image" src="https://github.com/user-attachments/assets/f5ebbb26-e24d-45e2-975e-a23d26c840bd" />
-
+* Income Class Distribution
+* Education Level vs Income
+* Age Distribution by Income Class
+* Correlation Heatmap
+* Model Comparison Charts
 * Feature Importance Analysis
-
 * Confusion Matrices
 These visualizations helped identify patterns and relationships within the data before model training.
+
+# Data Preprocessing
+The following preprocessing steps were applied:
+- Loaded the dataset into Spark DataFrames.
+- Converted categorical variables into numerical indices using StringIndexer.
+- Combined all predictor variables using VectorAssembler.
+- Split the dataset into training and testing sets (80/20).
+- Prepared the data for distributed machine learning using Spark MLlib.
+
+# Machine Learning Models
+## Decision Tree Classifier
+A Decision Tree model was trained to learn decision rules from the available features and predict income categories.
+## Random Forest Classifier
+A Random Forest model consisting of multiple decision trees was trained to improve prediction performance and reduce overfitting.
+
+# Model Evaluation
+The models were evaluated using:
+- Accuracy Score
+- Classification Report
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+
+# Feature Importance
+Feature importance analysis revealed that the most influential variables included:
+- Age
+- Education Years
+- Capital Gain
+- Hours Worked Per Week
+- Marital Status
+These features contributed most strongly to predicting an individual's income category.
+
+#Key Findings
+- Random Forest outperformed the Decision Tree classifier.
+- Individuals with higher education levels were more likely to earn above $50K.
+- Capital gains and working hours showed strong relationships with income level.
+- Distributed machine learning with Apache Spark effectively handled the large dataset.
+- Feature importance analysis provided insight into the factors influencing income classification.
