@@ -63,7 +63,7 @@ Feature importance analysis revealed that the most influential variables include
 - Marital Status
 These features contributed most strongly to predicting an individual's income category.
 
-#Key Findings
+# Key Findings
 - Random Forest outperformed the Decision Tree classifier.
 - Individuals with higher education levels were more likely to earn above $50K.
 - Capital gains and working hours showed strong relationships with income level.
